@@ -20,3 +20,36 @@ such as Euler number test and mass centroid test to recognize each digit.
 A example of a 256*256, 8-bit grayscale bmp file: 
 
 ![Image of Yaktocat](https://raw.githubusercontent.com/6swei/Optical-Character-Recognition/master/ocr1.bmp)
+
+###Classification technique:
+
+1. Euler number: Number of unique components to the character -> # of components - # of holes = 1 - # of holes
+('8' has 2 holes, '0' has 1, '2' has none)
+
+    E=1 => {1, 2, 3, 5, 7}
+
+    E=0 => {0, 4, 6, 9}
+
+    E=-1 => {8}
+
+2. Aspect Ratio: Height of the character divided by the width of the character.
+
+3. Vertical centroid: (∑ i ∗ 𝑖𝑠𝑏𝑙𝑎𝑐𝑘(𝑖,𝑗)
+𝐻,𝑊
+𝑖,𝑗=0,0
+) / [∑ 𝑖𝑠𝑏𝑙𝑎𝑐𝑘(𝑖,𝑗)
+𝐻,𝑊
+𝑖,𝑗=0,0
+]
+
+4. Horizontal centroid:  (∑ j ∗ 𝑖𝑠𝑏𝑙𝑎𝑐𝑘(𝑖,𝑗)
+𝐻,𝑊
+𝑖,𝑗=0,0
+) / [∑ 𝑖𝑠𝑏𝑙𝑎𝑐𝑘(𝑖,𝑗)
+𝐻,𝑊
+𝑖,𝑗=0,0
+]𝑘(𝑖,𝑗)]
+
+5. Vertical Symmetry:  pixels in the upper half divided by pixel in the lower half. 1 indicates a perfect match of the upper and lower half.
+
+6. Horiontal Symmetry: pixels in the left half divided by pixel in the right half. 1 indicates a perfect match of the upper and lower half.
