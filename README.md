@@ -52,4 +52,13 @@ A example of a 256*256, 8-bit grayscale bmp file:
 
 5. Vertical Symmetry:  pixels in the upper half divided by pixel in the lower half. 1 indicates a perfect match of the upper and lower half.
 
-6. Horiontal Symmetry: pixels in the left half divided by pixel in the right half. 1 indicates a perfect match of the upper and lower half.
+6. Horiontal Symmetry: pixels in the left half divided by pixel in the right half. 1 indicates a perfect match of the upper and lower half. 
+
+###Main Methods:
+
+1. Character(unsigned char (*myimage)[256], int ulr, int ulc, int h, int w) - constructor for initializing character object.
+-> myimage is a pointer to the 2D array image and each pixel in it is acessible.
+-> ulr stands for the upper left row of the bounding box of the character.
+-> ulc stands for the lower right row of the bounding box of the character.
+-> h stands for the height of the bounding box of the character.
+-> w stands for the width of the bounding box of the character.
