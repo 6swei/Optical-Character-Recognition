@@ -57,8 +57,13 @@ A example of a 256*256, 8-bit grayscale bmp file:
 ###Main Methods:
 
 1. Character(unsigned char (*myimage)[256], int ulr, int ulc, int h, int w) - constructor for initializing character object.
+
 -> myimage is a pointer to the 2D array image and each pixel in it is acessible.
+
 -> ulr stands for the upper left row of the bounding box of the character.
+
 -> ulc stands for the lower right row of the bounding box of the character.
+
 -> h stands for the height of the bounding box of the character.
+
 -> w stands for the width of the bounding box of the character.
