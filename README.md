@@ -68,9 +68,12 @@ A example of a 256*256, 8-bit grayscale bmp file:
 
 -> w stands for the width of the bounding box of the character.
 
+
 2)  void Classify() - It will use the result given by each classification tests to figure out the character.
 
+
 3)  void perform_tests - Call any member functinos to perform classification tests.
+
 
 4)  void get_bounding_box(int &sr, int &sc, int &er, int &ec) - Return two points that represents the top-left and bottom-right of the bounding box of the character.
 
