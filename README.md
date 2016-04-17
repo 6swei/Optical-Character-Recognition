@@ -31,7 +31,23 @@ A example of a 256*256, 8-bit grayscale bmp file:
     E=0 => {0, 4, 6, 9}
 
     E=-1 => {8}
+    
+   Computing the Euler number using Bit quads:
+   
+   there are 16 possible bit quads and we simply count how many bit quads that each character contains.
+   
+   ![Image of Yaktocat](https://github.com/6swei/Optical-Character-Recognition/blob/master/quad1.png)
+   
+   ![Image of Yaktocat](https://github.com/6swei/Optical-Character-Recognition/blob/master/quad2.png)
+   
+   Simple formula for finding Euler number: 𝐸 = 1/4 ∗ [𝑛{𝑄1} − 𝑛{𝑄3} − 2 ∗ 𝑛{𝑄𝑑}])
+   
+   We can also calculate the exact area and approximate perimeter of a character object by using
+   
+   Area = 1/4 * (𝑛{𝑄1} + 2 ∗ 𝑛{𝑄2} + 2 ∗ 𝑛{𝑄𝑑} + 3 ∗ 𝑛{𝑄3} + 4 ∗ 𝑛{𝑄4})
 
+   Perimeter = (𝑛{𝑄1} + 𝑛{𝑄2} + 2 ∗ 𝑛{𝑄𝑑} + 𝑛(𝑄3})
+   
 2. Aspect Ratio: Height of the character divided by the width of the character.
 
 3. Vertical centroid: (∑ i ∗ 𝑖𝑠𝑏𝑙𝑎𝑐𝑘(𝑖,𝑗)
@@ -84,4 +100,6 @@ A example of a 256*256, 8-bit grayscale bmp file:
 -> er stands for a reference to argument from caller that should be filled in with bottom-rightmost row
 
 -> ec stands for a reference to argument from caller that should be filled in with bottom-rightmost column
+
+5)  void print_calculations() - Prints out the calssification result to the screem.
 
